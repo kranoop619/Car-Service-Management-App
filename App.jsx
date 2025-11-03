@@ -223,7 +223,7 @@ const App = () => {
         const { name, value } = e.target;
         setServiceFormState(prev => ({
             ...prev,
-            [name]: name === 'amount' ? parseFloat(value) || '' : value,
+            [name]: value,
         }));
     };
 
@@ -291,7 +291,7 @@ const App = () => {
         const { name, value } = e.target;
         setExpenseFormState(prev => ({
             ...prev,
-            [name]: name === 'amount' ? parseFloat(value) || '' : value,
+            [name]: value,
         }));
     };
 
