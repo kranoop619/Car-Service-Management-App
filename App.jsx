@@ -567,7 +567,7 @@ const App = () => {
                             id="amount"
                             min="0.01"
                             step="0.01"
-                            value={serviceFormState.amount}
+                            value={serviceFormState.amount || ""}
                             onChange={handleServiceChange}
                             className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 border focus:border-indigo-500 focus:ring-indigo-500 transition duration-150"
                             placeholder="0.00"
@@ -731,7 +731,7 @@ const App = () => {
                         id="expenseAmount"
                         min="0.01"
                         step="0.01"
-                        value={expenseFormState.amount}
+                        value={expenseFormState.amount || ""}
                         onChange={handleExpenseChange}
                         className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 border focus:border-pink-500 focus:ring-pink-500 transition duration-150"
                         placeholder="0.00"
