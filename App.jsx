@@ -4,8 +4,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 // --- Supabase Configuration and Initialization ---
 const SUPABASE_CONFIG = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-const SUPABASE_URL = SUPABASE_CONFIG.supabaseUrl || "https://<your-project-id>.supabase.co"; 
-const SUPABASE_ANON_KEY = SUPABASE_CONFIG.supabaseKey || "your-anon-key";
+const SUPABASE_URL = SUPABASE_CONFIG.supabaseUrl || "https://cfcpnnmjplvvvyqqavhl.supabase.co"; 
+const SUPABASE_ANON_KEY = SUPABASE_CONFIG.supabaseKey || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmY3Bubm1qcGx2dnZ5cXFhdmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIwMDI4NjAsImV4cCI6MjA3NzU3ODg2MH0.071ejF4irIn9M2a8AkKEifiTebVg5ACP4uOfE4F2YiM";
 
 // Function to generate a stable, temporary user ID (mocking anonymous auth)
 const getAnonymousUserId = () => {
