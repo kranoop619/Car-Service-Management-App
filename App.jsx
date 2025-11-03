@@ -559,6 +559,9 @@ const App = () => {
     useEffect(() => {
         if (typeof window.supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
             try {
+                // Debug: Log Supabase URL and Key
+                console.log('SUPABASE_URL:', SUPABASE_URL);
+                console.log('SUPABASE_ANON_KEY:', SUPABASE_ANON_KEY);
                 // Initialize client globally using the window object for simplicity in single-file JSX
                 const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                 setSupabaseClient(client);
