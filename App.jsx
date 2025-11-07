@@ -589,7 +589,7 @@ const App = () => {
 
         // Fetch Service Types
         client
-            .from('service_types')
+            .from('config_services')
             .select('*')
             .order('name', { ascending: true })
             .then(({ data, error }) => {
@@ -838,7 +838,7 @@ const App = () => {
                 <ListManager
                     title="Service Types"
                     items={dynamicServiceTypes}
-                    tableName="service_types"
+                    tableName="config_services"
                     color="indigo"
                     supabaseClient={supabaseClient}
                     fetchConfigAndSubscribe={fetchConfigAndSubscribe}
