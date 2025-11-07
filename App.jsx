@@ -649,6 +649,7 @@ const App = () => {
                 console.error("Error fetching services:", error);
                 return;
             }
+            console.log("Fetched service data from Supabase:", data);
             setServices(data || []);
             setIsLoading(false);
         });
