@@ -639,7 +639,7 @@ const App = () => {
 
         // Function to fetch latest data
         const fetchLatest = () => client
-            .from('services')
+            .from('jobcarrd')
             .select('*')
             .order('created_at', { ascending: false })
             .limit(50);
@@ -658,7 +658,7 @@ const App = () => {
             .channel('services_changes')
             .on(
                 'postgres_changes',
-                { event: '*', schema: 'public', table: 'services' },
+                { event: '*', schema: 'public', table: 'jobcarrd' },
                 () => {
                     fetchLatest().then(({ data: newData }) => {
                         setServices(newData || []);
@@ -765,7 +765,7 @@ const App = () => {
 
         try {
             const { error } = await supabaseClient
-                .from('services')
+                .from('jobcarrd')
                 .insert([newRecord]);
 
             if (error) {
