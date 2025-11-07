@@ -606,7 +606,7 @@ const App = () => {
 
         // Fetch Expense Categories
         client
-            .from('expense_categories')
+            .from('config_expenses')
             .select('*')
             .order('name', { ascending: true })
             .then(({ data, error }) => {
@@ -849,7 +849,7 @@ const App = () => {
                 <ListManager
                     title="Expense Categories"
                     items={dynamicExpenseCategories}
-                    tableName="expense_categories"
+                    tableName="config_expenses"
                     color="pink"
                     supabaseClient={supabaseClient}
                     fetchConfigAndSubscribe={fetchConfigAndSubscribe}
