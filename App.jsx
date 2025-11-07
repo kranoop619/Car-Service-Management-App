@@ -4,8 +4,8 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 // --- Supabase Configuration and Initialization ---
 const SUPABASE_CONFIG = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
 // IMPORTANT: These variables must be populated in the environment configuration
-const SUPABASE_URL = SUPABASE_CONFIG.supabaseUrl || "https://<your-project-id>.supabase.co"; 
-const SUPABASE_ANON_KEY = SUPABASE_CONFIG.supabaseKey || "your-anon-key";
+const SUPABASE_URL = SUPABASE_CONFIG.supabaseUrl || "https://prj_c6Xeq9ZAjZ4u4cfMXgmVLqlxwfP4.supabase.co"; 
+const SUPABASE_ANON_KEY = SUPABASE_CONFIG.supabaseKey || "UPPqOBUBlOCFz2G89bWObc4R";
 
 // Function to generate a stable, temporary user ID (mocking anonymous auth)
 const getAnonymousUserId = () => {
