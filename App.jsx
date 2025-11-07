@@ -691,7 +691,7 @@ const App = () => {
 
         // Function to fetch latest data
         const fetchLatest = () => client
-            .from('expenses')
+            .from('config_expenses')
             .select('*')
             .order('created_at', { ascending: false })
             .limit(50);
@@ -811,7 +811,7 @@ const App = () => {
 
         try {
             const { error } = await supabaseClient
-                .from('expenses')
+                .from('config_expenses')
                 .insert([newRecord]);
 
             if (error) {
